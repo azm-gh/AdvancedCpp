@@ -17,7 +17,7 @@ public:
 	//if we remove the & reference it is not very useful 
 	//since its passed by value and therefore making a copy
 	void setAge(const int& a) { age = a; }
-	void setAge(int& a) { age = a; }
+	void setAge(int& a) { age = a; } //when this and the above is called ? Homework
 
 	//const return value
 	const std::string& getName() { return name; }
