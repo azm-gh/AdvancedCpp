@@ -60,3 +60,48 @@ int main()
 	std::cout << std::endl;
 	system("pause");
 	return 0;
+	
+	
+//------------------------------------------------------------------------------------------------------------
+// Second version with shared_ptr as explained in the beginning
+
+class Dog
+{
+public:
+	 ~Dog()  // without keyword virtual, only dog is destroyed
+	{
+		std::cout << "Dog destoyed" << std::endl;
+	}
+	 virtual void bark() {};
+};
+
+class YellowDog : public Dog
+{
+public:
+	~YellowDog()
+	{
+		std::cout << "Yellow dog is destroyed." << std::endl;
+	}
+};
+
+class DogFactory
+{
+public:
+	static std::shared_ptr<Dog> createYellowDog()
+	{
+		return std::shared_ptr<YellowDog>(new YellowDog());
+
+	}
+	//Create other dogs....
+};
+
+
+int main()
+{
+	std::shared_ptr<Dog> pd = DogFactory::createYellowDog();
+	//do something with pd
+
+	
+	std::cout << std::endl;
+	system("pause");
+	return 0;
