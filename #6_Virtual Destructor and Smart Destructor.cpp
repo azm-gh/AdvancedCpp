@@ -2,6 +2,8 @@
 /*Using virtual destructors in a polymorphic base classes
 https://www.youtube.com/watch?v=ZiNGWHg5Z-o&list=PLE28375D4AC946CC3&index=6
 https://stackoverflow.com/questions/5873515/why-should-the-destructor-of-base-classes-be-virtual
+https://stackoverflow.com/questions/20895648/difference-in-make-shared-and-normal-shared-ptr-in-c
+
 
 
 If a class is to be used in polymoprhic way. Such as in this case where we create yellow dog
